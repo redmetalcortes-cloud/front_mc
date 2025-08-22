@@ -1,42 +1,107 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+:root{
+  --bg:#0b0f17;
+  --card:#121826;
+  --muted:#9aa4b2;
+  --primary:#1dd1a1;
+  --primary-2:#00b894;
+  --accent:#66d9ff;
+  --border:#1f2937;
+  --danger:#ef4444;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+  background: radial-gradient(1200px 800px at 20% -10%, #192132 0%, #0b0f17 55%);
+  color:#e5e7eb;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.mc-app{max-width:1200px;margin:0 auto;padding:24px}
+
+.mc-header{
+  display:flex;align-items:center;justify-content:space-between;
+  margin-bottom:18px;
+}
+.mc-brand{display:flex;gap:12px;align-items:center}
+.mc-brand h1{margin:0;font-size:22px;letter-spacing:.4px}
+.mc-brand small{color:var(--muted)}
+.mc-logo{
+  width:38px;height:38px;display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--primary),var(--accent));
+  border-radius:12px;color:#0b0f17;font-weight:800
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.pill{
+  font-size:12px;padding:6px 10px;border:1px solid var(--border);
+  border-radius:999px;color:#cbd5e1;margin-left:8px
+}
+.pill-demo{border-color:#334155;background:#0f172a}
+
+.mc-grid{
+  display:grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap:16px;
+}
+@media(max-width:960px){.mc-grid{grid-template-columns:1fr}}
+
+.mc-card{
+  background:linear-gradient(180deg,rgba(255,255,255,.02),transparent 60%),
+             var(--card);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
 }
 
-.card {
-  padding: 2em;
+.mc-card h2{margin:0 0 12px 0;font-size:18px}
+
+.mc-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+@media(max-width:960px){.mc-row{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.mc-row{grid-template-columns:1fr}}
+
+.mc-field{display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+.mc-field label{font-size:12px;color:var(--muted)}
+.mc-field input,.mc-field select,.mc-field textarea{
+  background:#0e1524;border:1px solid #1e293b;color:#e5e7eb;
+  border-radius:10px;padding:10px 12px;outline:none
+}
+.mc-field input:focus,.mc-field select:focus,.mc-field textarea:focus{
+  border-color:#334155;box-shadow:0 0 0 3px rgba(102,217,255,.07)
 }
 
-.read-the-docs {
-  color: #888;
+.mc-checks{gap:12px;justify-content:flex-end}
+.mc-inline{display:flex;align-items:center;gap:8px;font-size:14px;color:#cbd5e1}
+
+.mc-switch{display:flex;align-items:center;gap:10px;margin:10px 0 8px 0}
+.mc-switch label{cursor:pointer}
+
+.mc-actions{display:flex;gap:10px;justify-content:flex-end;margin-top:8px}
+.btn{
+  background:linear-gradient(135deg,var(--primary),var(--primary-2));
+  border:none;color:#0b0f17;font-weight:700;padding:10px 14px;border-radius:12px;
+  cursor:pointer
 }
+.btn:hover{filter:brightness(1.05)}
+.btn-ghost{background:transparent;border:1px solid var(--border);color:#e5e7eb}
+.btn-outline{background:transparent;border:1px dashed var(--border);color:#cbd5e1}
+
+.mc-summary .mc-table{margin-top:4px}
+.mc-table > div{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:8px 0;border-bottom:1px dashed #1f2937
+}
+.mc-table .sep{border-bottom:0;margin:2px 0;height:2px;background:#1f2937}
+.mc-table .total{font-size:18px}
+
+.mc-kpis{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin:6px 0 12px}
+.kpi{background:#0e1524;border:1px solid #1f2937;border-radius:12px;padding:10px}
+.kpi-title{font-size:12px;color:#9aa4b2}
+
+.mc-hint{
+  margin-top:10px;color:#9aa4b2;font-size:12px;
+  background:#0e1524;border:1px dashed #1f2937;border-radius:12px;padding:10px
+}
+
+.mc-footer{margin-top:16px;text-align:center;color:#9aa4b2}
