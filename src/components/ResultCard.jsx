@@ -15,7 +15,7 @@ function ResultCard({ result }) {
         <div>
           <h3>Preview</h3>
           <img
-            src={`http://localhost:8000${result.preview_png_url}`}
+            src={`https://back-mc.onrender.com${result.preview_png_url}`}
             alt="Preview DXF"
             style={{ maxWidth: "400px", border: "1px solid #ccc" }}
           />
@@ -24,7 +24,7 @@ function ResultCard({ result }) {
 
       {result.pdf_url && (
         <a
-          href={`http://localhost:8000${result.pdf_url}`}
+          href={`https://back-mc.onrender.com${result.pdf_url}`}
           target="_blank"
           rel="noopener noreferrer"
         >

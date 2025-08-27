@@ -1,8 +1,8 @@
 import { useState } from "react";
 import axios from "axios";
 
-const API_URL = "http://localhost:8000/files/upload/"; 
-// ⚠️ cambia esto al dominio de Render o Vercel
+const API_URL = "https://back-mc.onrender.com/files/upload/"; 
+// ⚠️ cambia esto al dominio de Render
 
 function UploadForm({ setResult }) {
   const [file, setFile] = useState(null);
