@@ -1,0 +1,26 @@
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.upload-form input,
+.upload-form select,
+.upload-form button {
+  padding: 8px;
+  font-size: 14px;
+}
+
+.result-card {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
