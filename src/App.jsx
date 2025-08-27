@@ -1,5 +1,5 @@
 import { useState } from "react";
-import UploadForm from "./components/Uploadform";
+import UploadForm from "./components/UploadForm";
 import ResultCard from "./components/ResultCard";
 import "./App.css";
 
