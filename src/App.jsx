@@ -1,6 +1,7 @@
 import { useState } from "react";
-import UploadForm from "./components/UploadForm";
+import UploadForm from "./components/Uploadform";
 import ResultCard from "./components/ResultCard";
+import Login from "./components/Login";
 import "./App.css";
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
   return (
     <div className="container">
       <h1>EAZY DXF Processor</h1>
+      <Login />
       <UploadForm setResult={setResult} />
       {result && <ResultCard result={result} />}
     </div>
