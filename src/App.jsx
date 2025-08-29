@@ -1,19 +1,25 @@
-import { useState } from "react";
-import UploadForm from "./components/UploadForm";
-import ResultCard from "./components/ResultCard";
-import Login from "./components/Login";
-import "./App.css";
+import { Routes, Route, Navigate } from "react-router-dom";
+import LandingPage from "./pages/LandingPage";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Cotizaciones from "./pages/Cotizaciones";
+import Navbar from "./components/Navbar";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "./firebase";
 
 function App() {
-  const [result, setResult] = useState(null);
+  const [user] = useAuthState(auth);
 
   return (
-    <div className="container">
-      <h1>EAZY DXF Processor</h1>
-      <Login />
-      <UploadForm setResult={setResult} />
-      {result && <ResultCard result={result} />}
-    </div>
+    <>
+      <Navbar user={user} />
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/home" element={user ? <Home /> : <Navigate to="/login" />} />
+        <Route path="/cotizaciones" element={user ? <Cotizaciones /> : <Navigate to="/login" />} />
+      </Routes>
+    </>
   );
 }
 

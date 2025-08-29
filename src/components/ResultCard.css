@@ -1,0 +1,16 @@
+.result-card {
+  border-radius: 12px;
+  transition: transform 0.2s ease;
+}
+
+.result-card:hover {
+  transform: translateY(-4px);
+}
+
+.result-card .preview-container img {
+  max-height: 300px;
+  object-fit: contain;
+  border: 1px solid #ddd;
+  padding: 6px;
+  background: #fff;
+}

@@ -1,0 +1,11 @@
+.upload-form {
+  border-radius: 12px;
+}
+
+.upload-form h4 {
+  font-weight: 600;
+}
+
+.upload-form .btn {
+  border-radius: 8px;
+}

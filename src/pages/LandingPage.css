@@ -1,0 +1,11 @@
+.landing h1 {
+  font-weight: 700;
+}
+
+.landing .brand {
+  color: #0d6efd;
+}
+
+.landing p {
+  color: #666;
+}

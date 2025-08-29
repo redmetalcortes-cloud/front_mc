@@ -1,26 +1,51 @@
-.container {
-  max-width: 800px;
-  margin: auto;
-  padding: 20px;
-  font-family: Arial, sans-serif;
+/* =========================
+   Estilos generales de la App
+   ========================= */
+
+body {
+  background-color: #f5f7fa;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #212529;
+  margin: 0;
+  padding: 0;
 }
 
-.upload-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin-bottom: 20px;
+/* Navbar */
+.app-navbar {
+  background: #0d6efd; /* Azul bootstrap */
+  padding: 0.75rem 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.upload-form input,
-.upload-form select,
-.upload-form button {
-  padding: 8px;
-  font-size: 14px;
+.app-navbar .navbar-brand {
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: white !important;
 }
 
-.result-card {
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+.app-navbar .nav-link {
+  color: rgba(255, 255, 255, 0.85) !important;
+  margin-left: 1rem;
+  transition: color 0.2s ease;
+}
+
+.app-navbar .nav-link:hover {
+  color: #fff !important;
+}
+
+/* Contenedor principal */
+.app-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* Footer */
+.app-footer {
+  background: #0d6efd;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
+  font-size: 0.9rem;
 }
