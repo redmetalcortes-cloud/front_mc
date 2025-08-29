@@ -57,7 +57,11 @@ function UploadForm({ setResult }) {
       <h4 className="mb-3">Nueva Cotización</h4>
       <div className="mb-3">
         <label className="form-label">Archivo DXF</label>
-        <input type="file" className="form-control" accept=".dxf" onChange={(e) => setFile(e.target.files[0])} />
+<input 
+  type="file" 
+  className="form-control" 
+  onChange={(e) => setFile(e.target.files[0])} 
+/>
       </div>
       <div className="mb-3">
         <label className="form-label">Material</label>
